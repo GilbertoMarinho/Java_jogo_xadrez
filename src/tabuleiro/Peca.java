@@ -1,7 +1,6 @@
 package tabuleiro;
 
 public class Peca {
-	
 	//Posição não deve ser acessada fora do package tabuleiro
 	protected Posicao posicao;
 	//Uma peça possui um tabuleiro; n peca ------- 1 tabuleiro 
@@ -18,9 +17,4 @@ public class Peca {
 	protected Tabuleiro getTabuleiro() {
 		return tabuleiro;
 	}
-
-
-	
-	
-	
 }

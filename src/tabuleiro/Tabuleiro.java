@@ -29,5 +29,16 @@ public class Tabuleiro {
 		this.qtdColunas = qtdColunas;
 	}
 	
+	// retorna uma peca no tabuleiro a partir da posicao de linha e coluna
+	public Peca peca(int linha, int coluna) {
+		return pecas[linha][coluna];
+	}
+	
+	//Sobrecarga do método peca
+	public Peca peca(Posicao posicao) {
+		return pecas[posicao.getLinha()][posicao.getColuna()];
+	}
+	
+	
 	
 }
