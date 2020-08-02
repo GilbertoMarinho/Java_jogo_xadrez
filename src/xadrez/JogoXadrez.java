@@ -1,7 +1,9 @@
 package xadrez;
 
+import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
-import xadrez.PecaXadrez;
+import xadrez.pecas.Rei;
+import xadrez.pecas.Torre;
 
 //Classe onde devem ficar as regras do jogo
 public class JogoXadrez {
@@ -9,8 +11,9 @@ public class JogoXadrez {
 
 	
 	public JogoXadrez() {
-		// Usando construtor de tabuleito com qtdLinha e qtdColuna
+		// instanciando um objeto tabuleiro tabuleiro com qtdLinha e qtdColuna
 		tabuleiro = new Tabuleiro(8,8);
+		configuracaoInicial();
 	}
 	
 	
@@ -28,7 +31,16 @@ public class JogoXadrez {
 	}
 	
 	
-	
+	private void configuracaoInicial(){
+		tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(7,0));
+		tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(7,7));
+		tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.BRANCO), new Posicao(7,4));
+		
+		
+		tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(0,0));
+		tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(0,7));
+		tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0,4));
+	}
 	
 	
 	

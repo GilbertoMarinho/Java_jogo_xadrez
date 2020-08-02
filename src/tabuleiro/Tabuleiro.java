@@ -31,13 +31,24 @@ public class Tabuleiro {
 	
 	// retorna uma peca no tabuleiro a partir da posicao de linha e coluna
 	public Peca peca(int linha, int coluna) {
-		return pecas[linha][coluna];
+		return this.pecas[linha][coluna];
 	}
 	
 	//Sobrecarga do método peca
 	public Peca peca(Posicao posicao) {
-		return pecas[posicao.getLinha()][posicao.getColuna()];
+		return this.pecas[posicao.getLinha()][posicao.getColuna()];
 	}
+	
+	
+	public void  colocarPeca(Peca peca, Posicao posicao) {
+		/* adiciona um objeto peca na matriz de peca 
+		que será instanciada junto com o construtor da classe Tabuleiro*/
+		this.pecas[posicao.getLinha()][posicao.getColuna()] = peca;
+		// atribuindo também o valor da posicao ao objeto Peca que acabei de inserir na minha matriz pecas
+		peca.posicao = posicao;
+	}
+	
+	
 	
 	
 	
